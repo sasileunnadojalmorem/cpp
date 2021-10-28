@@ -2,7 +2,7 @@
 using namespace std;
 
 int main (){
-    float a = 4.14;
-    a = int(a/1);
-    cout << a;
+    char name[]  = "name";
+    cout << name[1];
+    return 0 ; 
 }

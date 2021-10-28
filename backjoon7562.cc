@@ -10,10 +10,10 @@ using namespace std;
 int t,l,nowx,nowy,gox,goy;
 int arr[301][301];
 
-int xxy[8]= {-2, -1 ,1,2,-1,-2,1,1};
-int xxx [8]= {-1,-2,-2,1,+2,1,2,2};
+int xxy[8]= {2, 1, -1, -2, -2, -1, 1, 2};
+int xxx [8]= {1, 2, 2, 1, -1, -2, -2, -1};
 int dfs(int a,int b ,int c,int d){
-    memset(arr,0,sizeof(arr));
+    
     queue<pair<int,int>> que;
     que.push(make_pair(a,b));
     arr[a][b] = 1;
@@ -47,12 +47,14 @@ int dfs(int a,int b ,int c,int d){
     return arr[c][d] ;
 }
 int main () {
-    
+    ios::sync_with_stdio(0);
+    cin.tie(0);cout.tie(0);
     cin >> t;
     for(int i = 0; i< t; i++ ){
+        memset(arr,0,sizeof(arr));
         cin >> l >> nowy >> nowx >> goy >> gox;
         int result = dfs(nowy,nowx,goy,gox);
-        cout <<  result;
+        cout <<  result << "\n";
 
     }
 }
