@@ -2,7 +2,10 @@
 using namespace std;
 
 int main (){
-    char name[]  = "name";
-    cout << name[1];
-    return 0 ; 
+    bool arr[10] = {false,false,false,false,false,false,false,false,false};
+    for (int i = 0; i<=10 ; i++ ){
+        if(arr[i] == false){
+            cout << "yes" << i;
+        }
+    }
 }
