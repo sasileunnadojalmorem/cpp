@@ -4,9 +4,9 @@ typedef long long ll;
 ll n , m[100005];
 // 중앙값 오른쪽값 왼쪽값
 ll devide(int start,int end){
-    if (start == end) return (ll) m[start] * m[start] ;
+    if (start == end) return (ll) m[start] * m[start] ;//베이스 컨디션 정의
     ll mid = (start + end)/2;
-    ll result = max(devide(start,mid),devide(mid+1,end));
+    ll result = max(devide(start,mid),devide(mid+1,end));//구간을 나누어 재귀호출
     ll s = mid;
     ll e = mid + 1;
     ll sum = 0 ;
@@ -14,7 +14,7 @@ ll devide(int start,int end){
         sum +=  m[i];
     }
     ll small = min(m[s],m[e]);
-    result = max(result, sum * small );
+    result = max(result, sum * small );//상황에 맞는값 리턴 값 설정
     while (start<s || e < end){
         if (e<end && (start == s || m[e+1] > m[s-1])){
             small = min(small,m[++e]);
