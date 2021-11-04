@@ -16,5 +16,4 @@ int main () {
     cin >> n >> r >> c;
     divide(n,r,c);
     cout << divide(n,r,c);
-
 }
