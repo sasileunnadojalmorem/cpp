@@ -13,7 +13,6 @@ int main (void){
 
         }
     }
-    cout<<arr[2][2];
     for (int i = 1 ; i < n+1; i++){
         for(int j = 1 ; j < n+1; j++){
             add[i][j] = add[i-1][j] + add[i][j-1]  - add[i-1][j-1] + arr[i][j];
